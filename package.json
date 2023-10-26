@@ -22,5 +22,8 @@
     "url": "https://github.com/rboyce212/10-26-2023_project-budgeting-app_rboyce212/issues"
   },
   "homepage": "https://github.com/rboyce212/10-26-2023_project-budgeting-app_rboyce212#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
