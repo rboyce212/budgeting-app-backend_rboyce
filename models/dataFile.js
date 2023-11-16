@@ -1,5 +1,11 @@
 const { v4: uuidv4 } = require("uuid");
 
+// item_name - string - the name of the transaction (ie: income, savings, cat food, etc.)
+// amount - number - the amount of the transaction
+// date - string - the date should be a simple string.
+// from - string - who this transaction was with (ie. employer, bank, pet store, grocery store, etc)
+// category - string - budget app category name
+
 const dataArray = [
   {
     id: uuidv4(),
