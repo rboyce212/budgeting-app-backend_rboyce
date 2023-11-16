@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require("uuid");
+// const { v4: uuidv4 } = require("uuid");
 
 // item_name - string - the name of the transaction (ie: income, savings, cat food, etc.)
 // amount - number - the amount of the transaction
@@ -6,9 +6,9 @@ const { v4: uuidv4 } = require("uuid");
 // from - string - who this transaction was with (ie. employer, bank, pet store, grocery store, etc)
 // category - string - budget app category name
 
-const dataArray = [
+const transactionArray = [
   {
-    id: uuidv4(),
+    id: 1011,
     item_name: "Root Canal",
     amount: 26000,
     date: "2023-10-02",
@@ -16,7 +16,7 @@ const dataArray = [
     category: "bills"
   },
   {
-    id: uuidv4(),
+    id: 1012,
     item_name: "Groceries",
     amount: 22700,
     date: "2023-10-04",
@@ -24,7 +24,7 @@ const dataArray = [
     category: "food"
   },
   {
-    id: uuidv4(),
+    id: 1013,
     item_name: "Netflix",
     amount: 2200,
     date: "2023-10-02",
@@ -32,7 +32,7 @@ const dataArray = [
     category: "entertainment"
   },
   {
-    id: uuidv4(),
+    id: 1014,
     item_name: "MTA Pass",
     amount: 9400,
     date: "2023-10-05",
@@ -40,7 +40,7 @@ const dataArray = [
     category: "transportation"
   },
   {
-    id: uuidv4(),
+    id: 1015,
     item_name: "Dinner",
     amount: 600,
     date: "2023-10-05",
@@ -48,7 +48,7 @@ const dataArray = [
     category: "food"
   },
   {
-    id: uuidv4(),
+    id: 1016,
     item_name: "Compression Socks",
     amount: 5296,
     date: "2023-10-06",
@@ -56,7 +56,7 @@ const dataArray = [
     category: "personal"
   },
   {
-    id: uuidv4(),
+    id: 1017,
     item_name: "Misc Supplies",
     amount: 600,
     date: "2023-10-02",
@@ -65,4 +65,4 @@ const dataArray = [
   }
 ];
 
-module.export = dataArray;
+module.exports = transactionArray;

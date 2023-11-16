@@ -1,6 +1,6 @@
 const express = require("express");
 const transactionRouter = express.Router();
-const { v4: uuidv4 } = require("uuid");
+// const { v4: uuidv4 } = require("uuid");
 const transactionArray = require("../models/dataFile");
 
 transactionRouter.use(express.json());
@@ -8,10 +8,10 @@ transactionRouter.use(express.json());
 // get all transactions
 transactionRouter.get("/", (req, res, next) => {
   try {
-    if (transactionArray && transactionArray.length > 0) {
+    if (transactionArray[0]) {
       res.status(200).send(transactionArray);
     } else {
-      res.status(404).send({ message: "Teransactions were not found." });
+      res.status(404).send({ message: "Transactions were not found." });
     }
   } catch (error) {
     next(error);
@@ -61,7 +61,7 @@ transactionRouter.put("/:id", (req, res, next) => {
     const transactionId = parseInt(req.params.id);
     const updateTransaction = req.body;
     const transactionIndex = transactionArray.findIndex(
-      ({ element }) => element.id === transactionId
+      ({ item }) => item.id === transactionId
     );
 
     if (transactionIndex === -1) {
